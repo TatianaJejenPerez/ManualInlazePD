@@ -1,5 +1,5 @@
 
-![badge](Imagenes/inlaze_logo2.webp)
+![badge](Imagenes/inlaze_logo0.png)
 
 # Manual Partidos Diarios
 
