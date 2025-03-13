@@ -26,7 +26,7 @@
 
    #### Objetivo del Modelo 
     
-    Proyectar indicadores clave de rendimiento (Leads, First-Time Deposits - FTDs, y Cost Per Acquisition - CPA) para eventos de fútbol, basado en datos históricos y factores contextuales. Esto permite predecir el impacto de eventos específicos en el comportamiento de los usuarios en mercados de apuestas como Colombia y Brasil.
+  Proyectar indicadores clave de rendimiento (Leads, First-Time Deposits - FTDs, y Cost Per Acquisition - CPA) para eventos de fútbol, basado en datos históricos y factores contextuales. Esto permite predecir el impacto de eventos específicos en el comportamiento de los usuarios en mercados de apuestas como Colombia y Brasil.
     
     
 
