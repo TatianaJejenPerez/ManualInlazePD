@@ -1,3 +1,4 @@
+
 ![badge](Imagenes/inlaze_logo0.png)
 
 # Manual Partidos Diarios
