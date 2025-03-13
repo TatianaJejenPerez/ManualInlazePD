@@ -17,8 +17,9 @@
   - [3. Datos a tener en cuenta para las posibles estrategias](#3-datos-a-tener-en-cuenta-para-las-posibles-estrategias)
     - [Conclusiones Competencias](#conclusiones-competencias)
   - [4.Componentes y Reglas del Modelo](#4-componentes-y-reglas-del-modelo)
-  - [5. Fuentes](#5-fuentes)
-  - [6. Contacto](#5-contacto)
+  - [5. ✨ TIPS BI ✨](#5--tips-bi-)
+  - [6. Fuentes](#6-fuentes)
+  - [7. Contacto](#7-contacto)
 
 --  
 
@@ -41,9 +42,11 @@
 
 ### Fuentes de trabajo
 
-- La principal fuente de este tablero es la base que nos proporciona una API específicamente de fútbol en la cual encontraremos fechas de futuros partidos. Es de tener en cuenta que el API no es en tiempo real y que tarda en actualizar un promedio de 2 a 3 días las nuevas competencias o nuevos partidos programados según los resultados de cada encuentro.
-- La segunda base es el histórico con el que cuenta la compañía, con el cual podemos proyectar las intenciones de apuestas por competencia y equipo usando (Leads, FTD y CPA). 
-- Tendencia deportivas, se investiga por competencia cuales son más populares para proyectar una intencion de apuesta más acertada.
+- La principal fuente de este tablero es la base de datos proporcionada por una API especializada en fútbol, donde se pueden consultar las fechas de futuros partidos. Es importante destacar que esta API no es en tiempo real, por lo que puede tardar entre 2 y 3 días en actualizarse con nuevas competencias o partidos programados, según los resultados de los encuentros previos.
+
+- La segunda fuente es el histórico con el que cuenta la compañía, que nos permite proyectar las intenciones de apuestas por competencia y equipo, utilizando métricas como Leads, FTD y CPA.
+
+- Tendencias deportivas: Se investiga por competencia cuáles son las más populares para proyectar de manera más precisa las intenciones de apuestas.
 
 
 [índice](#índice)
@@ -59,7 +62,7 @@
 
 ### Filtros 
 
-Se genera la creación de un filtro flotante por fechas para que se puede seleccionar una o varias fechas según los partidos que se quieran visualizar.adicional ayudara a una forma más rapida de navegacion.
+Se implementa un filtro flotante por fechas, lo que permite seleccionar una o varias fechas para visualizar los partidos correspondientes. Además, esto ayudará a mejorar la velocidad de navegación, ofreciendo una experiencia más ágil.
 
 ![Imagenes/filtro.png](Imagenes/filtro.png)
 
@@ -67,9 +70,9 @@ Se genera la creación de un filtro flotante por fechas para que se puede selecc
 
 ### Tablas programación de partidos
 
-En estas tablas se podrá visualizar los partidos que se juegan hoy, mañana o están próximos a jugar junto con las proyecciones de leads, FTD y CPA que puede causar cada uno.
+En estas tablas se podrán visualizar los partidos que se juegan hoy, mañana o los que están próximos a jugarse, junto con las proyecciones de leads, FTD y CPA que cada uno podría generar.
 
-Es importante que tengan en cuenta que la tabla número 3 que se puede ver en la siguiente imagen está porcentuada de manera general porque están todas las fechas. Esto quiere decir que para ver el impacto puntual de los partidos se debe seleccionar en el filtro la fecha que se quiere validar y así nos dará el porcentaje real de los partidos que se jugarán.
+Es importante tener en cuenta que la tabla número 3, que se muestra en la siguiente imagen, está porcentuada de manera general, ya que incluye todas las fechas. Esto significa que, para ver el impacto puntual de los partidos, es necesario seleccionar la fecha deseada en el filtro. De esta forma, se mostrará el porcentaje real de los partidos que se jugarán en esa fecha específica.
 
 ![Imagenes/tablas.png](Imagenes/tablas.png)
 
@@ -233,8 +236,17 @@ Esto asegura que las proyecciones reflejen la distribución realista de la deman
  
  
 Este árbol se usa para calcular probabilidades ajustadas de conversión (Leads, FTDs) y CPA para cada partido.
+
+
+## 5. ✨ TIPS BI ✨
+
+Se pudo comprobar mediante la hitoria que los apostadores pueden estar más interesados en apostar por equipos que se encuentran en las tablas bajas (se refieren a los equipos que se encuentran en las posiciones más bajas de la clasificación en una liga o competición deportiva)
+
+Los equipos que ocupan las posiciones más bajas de la tabla suelen tener cuotas más altas porque su rendimiento durante la temporada ha sido más débil. Las casas de apuestas, al ver que estos equipos tienen menos chances de ganar, aumentan las cuotas para hacer que apostar por ellos sea más atractivo.
+
+    Por ejemplo, si un equipo de la parte baja se enfrenta a uno de los líderes de la liga, la probabilidad de que el equipo de la parte baja gane es baja, por lo que las cuotas para su victoria serán mucho más altas.
   
-## 5. Fuentes
+## 6. Fuentes
 
 - Forbes. (2024, 28 de agosto). Apuestas deportivas crecerán 40% en Colombia este 2024 por cuenta de los grandes eventos. https://forbes.co/2024/08/28/deportes-2/apuestas-deportivas-creceran-40-en-colombia-este-2024-por-cuenta-de-los-grandes-eventos/
 - Focusgn. (2024, 9 de julio). Qué porcentaje de las apuestas deportivas en Brasil corresponde al fútbol. https://focusgn.com/latinoamerica/que-porcentaje-de-las-apuestas-deportivas-en-brasil-corresponde-al-futbol
@@ -244,7 +256,7 @@ Este árbol se usa para calcular probabilidades ajustadas de conversión (Leads,
 
 [índice](#índice)
 
-## 6. Contacto
+## 7. Contacto
 
 Para sugerencias,dudas o peticiones contactar a el siguiente correo (Equipo BI):
 
