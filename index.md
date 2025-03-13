@@ -16,8 +16,20 @@
     - [Ejemplos de filtro ](#ejemplos-de-filtro)
   - [3. Datos a tener en cuenta para las posibles estrategias](#3-datos-a-tener-en-cuenta-para-las-posibles-estrategias)
     - [Conclusiones Competencias](#conclusiones-competencias)
-  - [4.Reglas para Construcción de Indicadores](#4-reglas-para-construcción-de-indicadores)
-  - [5. Contacto](#5-contacto)
+  - [4.Componentes y Reglas del Modelo](#4-componentes-y-reglas-del-modelo)
+  - [5. Fuentes](#5-fuentes)
+  - [6. Contacto](#5-contacto)
+
+--  
+
+
+   #### Objetivo del Modelo 
+    
+    Proyectar indicadores clave de rendimiento (Leads, First-Time Deposits - FTDs, y Cost Per Acquisition - CPA) para eventos de fútbol, basado en datos históricos y factores contextuales. Esto permite predecir el impacto de eventos específicos en el comportamiento de los usuarios en mercados de apuestas como Colombia y Brasil.
+    
+    
+
+
 
 ## 1. Recursos
 
@@ -72,7 +84,11 @@ Esta seria la manera correcta de filtrar para poder visualizar el impacto exacto
 
 ## 3. Datos a tener en cuenta para las posibles estrategias
 
-Tendencia de poularidad para las competencias  tanto en Colombia como en Brasil (Estos fueron unos de los porcentajes usados para dimencionar las proyecciones)
+**🔹Colombia:** El fútbol representa aproximadamente el 85% del mercado de apuestas en línea. Los eventos más populares incluyen la Copa América, la Champions League, y las principales ligas europeas (Serie A, Premier League, La Liga, Bundesliga). Otros deportes como tenis, boxeo, ciclismo y atletismo constituyen el 15% restante.
+ 
+**🔹Brasil**: El fútbol domina con un 84.2% de las apuestas deportivas, seguido del baloncesto (7.2%) y los eSports (6.1%).
+
+Tendencia de popularidad para las competencias  tanto en Colombia como en Brasil (Estos fueron unos de los porcentajes usados para dimencionar las proyecciones)
 
 ![Imagenes/tendenciaporcompetencia.png](Imagenes/tendenciaporcompetencia.png)
 
@@ -143,25 +159,92 @@ Basandonos en algunos articulos e investigaciones podemos concluir que :
 
 [índice](#índice)
 
-## 4. Reglas para Construcción de Indicadores
+## 4. Componentes y Reglas del Modelo
+
+**- 1. Segmentación del Mercado y Relevancia de Eventos**
+ 
+ Basado en investigación de mercado, se identificó que el fútbol tiene una participación significativa en las apuestas: 86% en Colombia y 85% en Brasil.
+ 
+ Este dato orienta el modelo a priorizar eventos futbolísticos sobre otros deportes.
+ 
+ 
+ 
+**-2. Cálculo de la Fecha del Depósito**
+ 
+Para cada partido, se asume que los depósitos asociados a apuestas ocurren mayoritariamente tres días antes del evento. Este supuesto se basa en tendencias observadas en los datos históricos.
+ 
+ 
+ 
+**-3. Modelado de Intención de Conversión**
+ 
+Se analiza el comportamiento histórico de Leads, FTDs y CPA por día en función de los partidos jugados en esas fechas.
+ 
+     Variables clave consideradas:
+    
+    - Equipos que participaron.
+ 
+    - Localidad del equipo (local o visitante).
+ 
+    - Tipo de competencia (ligas locales, torneos internacionales, etc.).
+ 
+ 
+El análisis incluye un desglose granular para identificar patrones por equipo y contexto.
+ 
+ 
+ 
+**-4. Incorporación de Comportamientos Históricos**
+ 
+    Se evalúa el comportamiento de usuarios con base en:
+ 
+    - Historial de apuestas por equipo.
+ 
+    - Resultados previos de los equipos y su desempeño en la competencia.
+ 
+    - Si el equipo jugó como local o visitante.
+ 
+Esto permite ponderar la intención de conversión de forma más precisa.
+ 
+ 
+ 
+**-5. Penalización para Evitar Duplicidad**
+ 
+Para evitar la sobreestimación de Leads y Depósitos, el modelo aplica una penalización (o "castigo") en función de:
+ 
+La popularidad de la competencia en el mercado.
+ 
+El número total de partidos jugados en una misma fecha.
+ 
+ 
+Esto asegura que las proyecciones reflejen la distribución realista de la demanda.
+ 
+ 
+ 
+**-6. Construcción del Árbol de Decisión**
+ 
+    El modelo genera un árbol de decisión que clasifica los eventos con base en:
+ 
+    - Fecha del depósito proyectada.
+ 
+    - Tipo de encuentro (liga local, internacional, amistoso, etc.).
+ 
+    - Competencia específica.
+ 
+    - Condición de los equipos (local o visitante).
+ 
+ 
+Este árbol se usa para calcular probabilidades ajustadas de conversión (Leads, FTDs) y CPA para cada partido.
+  
+## 5. Fuentes
+
+- Forbes. (2024, 28 de agosto). Apuestas deportivas crecerán 40% en Colombia este 2024 por cuenta de los grandes eventos. https://forbes.co/2024/08/28/deportes-2/apuestas-deportivas-creceran-40-en-colombia-este-2024-por-cuenta-de-los-grandes-eventos/
+- Focusgn. (2024, 9 de julio). Qué porcentaje de las apuestas deportivas en Brasil corresponde al fútbol. https://focusgn.com/latinoamerica/que-porcentaje-de-las-apuestas-deportivas-en-brasil-corresponde-al-futbol
 
 
--  Fútbol por investigación de mercado de apuestas en Colombia y Brasil (86 y 85 % respectivamente).
 
-- Fecha del partido = que se usa para proyectar Fecha deposito y - 3 días.
-  
-- Intención de Leads, FTD y CPAs debido al evento futbolístico (se toma historico de Leads, FTD y CPAs por día y se calcula segun partidos y equipos que jugaron ese mismo día ).  
-  
-- Comportamiento histórico por equipo, si era local o visitante y tipo de competencia, acorde a intención anterior.
-  
-- Castigar la probabilidad de la intención por competencia más apostada en mercado y por total de partidos por fecha (para evitar duplicar los Leads, FTD y CPA).
-  
-- Eso genera automáticamente un árbol de decisión por deposito, encuentro, competencia, local-visitante, equipo de fútbol.
-  
 
 [índice](#índice)
 
-## 5. Contacto
+## 6. Contacto
 
 Para sugerencias,dudas o peticiones contactar a el siguiente correo (Equipo BI):
 
